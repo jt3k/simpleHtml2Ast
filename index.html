@@ -7,12 +7,32 @@
   <meta name="viewport" content="width=device-width">
 	<style>
 		#out div div {
-				padding-left: 10px;
-				border-left: 1px solid lightgray;
-			}
-			body,html,.cell {
-				height: 100%;
-			}
+			padding-left: 10px;
+			border-left: 1px solid lightgray;
+		}
+
+		#out div :last-child:after {
+			position: absolute;
+			content: '';
+			border-top: 1px solid lightgray;
+			height: 1em;
+			background-color: rgba(255, 255, 255, 0.84);
+			width: 10px;
+			left: -1px;
+			right: 0;
+			height: 100%;
+			top: 8px;
+			display: inline-block;
+		}
+
+		#out div {
+			position: relative;
+		}
+
+
+		body,html,.cell {
+			height: 100%;
+		}
 		.cell {
 			float: left;
 			width: 50%;
